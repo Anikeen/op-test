@@ -1,0 +1,16 @@
+.content-item {
+  margin-bottom: 10px;
+
+  &__title {
+    font-family: 'Gilroy';
+    font-size: 25px;
+    line-height: 1.2;
+    font-weight: 600;
+    color: #8cc9e8;
+  }
+
+  &__text {
+    font-size: 25px;
+    line-height: 1.2;
+  }
+}

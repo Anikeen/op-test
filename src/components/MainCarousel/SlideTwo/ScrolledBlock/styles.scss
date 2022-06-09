@@ -1,0 +1,17 @@
+.scrolled-block {
+  display: flex;
+  justify-content: space-between;
+  height: 440px;
+  width: 775px;
+  margin-top: 50px;
+
+  &__container {
+    height: 100%;
+    overflow: hidden;
+  }
+
+  &__text {
+    position: relative;
+    font-size: 25px;
+  }
+}

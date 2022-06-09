@@ -1,0 +1,279 @@
+@keyframes scale-further {
+
+  0% {
+    transform: scale(1)
+  }
+
+  50% {
+    transform: scale(0.9)
+  }
+
+  100% {
+    transform: scale(1)
+  }
+}
+
+@keyframes scale-closer {
+
+  0% {
+    transform: scale(0.9)
+  }
+
+  50% {
+    transform: scale(1)
+  }
+
+  100% {
+    transform: scale(0.9)
+  }
+}
+
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes spore_1-animX {
+  0% {
+    right: 50px;
+  }
+
+  100% {
+    right: 250px;
+  }
+}
+
+@keyframes spore_1-animY {
+  0% {
+    top: 180px;
+  }
+
+  100% {
+    top: 100px;
+  }
+}
+
+@keyframes spore_2-animX {
+  0% {
+    right: 210px;
+  }
+
+  100% {
+    right: 230px;
+  }
+}
+
+@keyframes spore_2-animY {
+  0% {
+    top: 60px;
+  }
+
+  100% {
+    top: 90px;
+  }
+}
+
+@keyframes spore_3-animX {
+  0% {
+    left: 500px;
+  }
+
+  100% {
+    left: 550px;
+  }
+}
+
+@keyframes spore_3-animY {
+  0% {
+    bottom: -10px;
+  }
+
+  100% {
+    bottom: -40px;
+  }
+}
+
+@keyframes spore_4-animX {
+  0% {
+    left: 30px;
+  }
+
+  100% {
+    left: 10px;
+  }
+}
+
+@keyframes spore_4-animY {
+  0% {
+    bottom: 210px;
+  }
+
+  100% {
+    bottom: 180px;
+  }
+}
+
+@keyframes buble_1-animX {
+  0% {
+    left: 30px;
+  }
+
+  100% {
+    left: 10px;
+  }
+}
+
+@keyframes buble_1-animY {
+  0% {
+    top: 130px;
+  }
+
+  100% {
+    top: 110px;
+  }
+}
+
+@keyframes buble_2-animX {
+  0% {
+    left: 130px;
+  }
+
+  100% {
+    left: 150px;
+  }
+}
+
+@keyframes buble_2-animY {
+  0% {
+    top: 240px;
+  }
+
+  100% {
+    top: 210px;
+  }
+}
+
+@keyframes buble_3-animX {
+  0% {
+    left: 140px;
+  }
+
+  100% {
+    left: 160px;
+  }
+}
+
+@keyframes buble_3-animY {
+  0% {
+    top: -15px;
+  }
+
+  100% {
+    top: -25px;
+  }
+}
+
+@keyframes buble_4-animX {
+  0% {
+    left: 190px;
+  }
+
+  100% {
+    left: 220px;
+  }
+}
+
+@keyframes buble_4-animY {
+  0% {
+    bottom: 100px;
+  }
+
+  100% {
+    bottom: 130px;
+  }
+}
+
+@keyframes buble_5-animX {
+  0% {
+    left: 130px;
+  }
+
+  100% {
+    left: 70px;
+  }
+}
+
+@keyframes buble_5-animY {
+  0% {
+    top: 80px;
+  }
+
+  100% {
+    top: 50px;
+  }
+}
+
+@keyframes buble_6-animX {
+  0% {
+    left: 130px;
+  }
+
+  100% {
+    left: 70px;
+  }
+}
+
+@keyframes buble_6-animY {
+  0% {
+    bottom: 0;
+  }
+
+  100% {
+    bottom: -15px;
+  }
+}
+
+@keyframes buble_7-animX {
+  0% {
+    left: -40px;
+  }
+
+  100% {
+    left: 0px;
+  }
+}
+
+@keyframes buble_7-animY {
+  0% {
+    top: 375px;
+  }
+
+  100% {
+    top: 430px;
+  }
+}
+
+@keyframes buble_8-animX {
+  0% {
+    left: -75px;
+  }
+
+  100% {
+    left: 0px;
+  }
+}
+
+@keyframes buble_8-animY {
+  0% {
+    top: 500px;
+  }
+
+  100% {
+    top: 570px;
+  }
+}

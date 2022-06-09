@@ -1,0 +1,25 @@
+.button-sausage {
+  display: flex;
+  align-items: center;
+  height: 80px;
+  width: 100%;
+  padding: 15px;
+  font-family: "DIN Pro";
+  font-size: 27px;
+  background-color: #ff6a9f;
+  border-radius: 50px;
+  pointer-events: auto;
+
+  &__icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60px;
+    width: 60px;
+    margin-right: 20px;
+    border-radius: 50%;
+    background-image: url(../../../../assets/img/ui/Ellipse.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+}

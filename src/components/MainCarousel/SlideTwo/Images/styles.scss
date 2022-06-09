@@ -1,0 +1,88 @@
+.sperm1 {
+  top: 250px;
+  left: 565px;
+  opacity: 0;
+  z-index: -1;
+  transition: all 3s ease-out;
+
+  &.show {
+    top: 100px;
+    left: 365px;
+    opacity: 1;
+  }
+}
+
+.sperm2 {
+  top: 200px;
+  left: 680px;
+  opacity: 0;
+  z-index: -1;
+  transition: all 3s ease-out;
+
+  &.show {
+    top: 100px;
+    left: 580px;
+    opacity: 1;
+  }
+}
+
+.sperm_3 {
+  top: 180px;
+  left: 910px;
+  opacity: 0;
+  z-index: -1;
+  transition: all 4s ease-out;
+
+  &.show {
+    top: 80px;
+    left: 710px;
+    opacity: 1;
+  }
+}
+
+.sperm_4 {
+  top: 510px;
+  right: -460px;
+  opacity: 0;
+  z-index: -1;
+  transition: all 2.5s ease-out;
+
+  &.show {
+    top: 410px;
+    right: -260px;
+    opacity: 1;
+  }
+}
+
+.sperm_5 {
+  top: 590px;
+  right: -230px;
+  opacity: 0;
+  z-index: -1;
+  opacity: 0.7;
+  transition: all 2.5s ease-out;
+
+  &.show {
+    top: 520px;
+    right: -130px;
+    opacity: 0.7;
+  }
+}
+
+@keyframes anim-sperm-5 {
+  from {
+    top: 590px;
+    right: -230px;
+    opacity: 0;
+  }
+
+  75% {
+    opacity: .3;
+  }
+
+  to {
+    top: 520px;
+    right: -130px;
+    opacity: 0.7;
+  }
+}

@@ -1,0 +1,58 @@
+.container {
+  padding-left: 70px;
+  padding-right: 45px;
+
+  &--small {
+    padding-left: 350px;
+  }
+}
+
+.title {
+  position: relative;
+  font-family: 'Gilroy';
+  font-weight: 400;
+  line-height: 1.2;
+  text-transform: uppercase;
+  user-select: none;
+
+  &--big {
+    font-size: 109px;
+    line-height: 117px;
+    font-weight: 300;
+  }
+
+  &--small {
+    font-family: "DIN Pro";
+    font-size: 27px;
+  }
+
+  &--top {
+    position: absolute;
+    left: 0;
+    bottom: 100%;
+    height: auto;
+    width: auto;
+  }
+}
+
+.stack {
+  display: flex;
+  flex-direction: column;
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+}
+
+.block {
+  padding: 30px;
+  background-color: #fff;
+  border-radius: 40px;
+  box-shadow: 2.723px 4.193px 116.25px 8.75px rgba(157, 185, 198, 0.39);
+
+}
+
+.on-top {
+  z-index: 11111;
+}

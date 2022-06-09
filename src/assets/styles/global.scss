@@ -1,0 +1,39 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  font-family: 'DIN Pro', 'Open Sans', sans-serif;
+  font-size: 14px;
+  line-height: 1.25;
+  color: #272727;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+a:hover {
+  color: inherit;
+}
+
+input,
+button {
+  outline: none;
+  border: none;
+}
+
+button {
+  font-family: inherit;
+  background-color: inherit;
+  cursor: pointer;
+}

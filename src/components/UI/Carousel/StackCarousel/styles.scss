@@ -1,0 +1,57 @@
+.stack-carousel {
+  position: relative;
+  height: 100%;
+  width: 100%;
+
+  &__item {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: #fff;
+  }
+
+  &__control {
+    position: absolute;
+    bottom: 10px;
+    pointer-events: auto;
+  }
+
+  &__next {
+    background: url('../../../../assets/img/icons/btn_next.png');
+  }
+
+  &__prev {
+    background: url('../../../../assets/img/icons/btn_prev.png');
+  }
+
+  &__next,
+  &__prev {
+    height: 20px;
+    width: 14px;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+
+  &__dots {
+    margin: 0 20px;
+  }
+
+  &__dot {
+    height: 10px;
+    width: 10px;
+    margin-right: 10px;
+    border: 2px solid #333;
+    border-radius: 50%;
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    &--active {
+      background-color: #fc6da9;
+      border-color: #fc6da9;
+    }
+  }
+}

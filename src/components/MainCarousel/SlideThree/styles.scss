@@ -1,0 +1,38 @@
+.slide-three {
+  position: relative;
+
+  &__icon {
+    position: relative;
+    bottom: 3px;
+    font-size: 30px;
+    line-height: 60px;
+    color: #fff;
+  }
+}
+
+.grid-block {
+  display: grid;
+  gap: 40px;
+  grid-template-columns: 50% 260px;
+  grid-template-rows: 150px 100px;
+
+  grid-template-areas:
+    "A B "
+    "A C";
+
+  margin-top: 80px;
+}
+
+.area-a {
+  grid-area: A;
+}
+
+.area-b {
+  grid-area: B;
+}
+
+.area-c {
+  grid-area: C;
+  justify-self: stretch;
+  align-self: end;
+}

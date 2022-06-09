@@ -1,0 +1,32 @@
+.slider {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+
+  overflow: hidden;
+
+  &__scene {
+    display: flex;
+
+    position: absolute;
+    top: 0px;
+    left: 0px;
+
+    height: 100%;
+
+    background-image: url(../../../../assets/img/bg.png);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    transition: all .6s ease-out;
+    pointer-events: none;
+  }
+}
+
+.slide {
+  position: relative;
+  height: 100%;
+  padding-top: 190px;
+  z-index: 1;
+}

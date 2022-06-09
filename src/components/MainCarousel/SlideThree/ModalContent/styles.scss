@@ -1,0 +1,11 @@
+.modal-content {
+  height: 570px;
+  width: 820px;
+
+  &__container {
+    padding-left: 180px;
+    padding-top: 200px;
+    width: 100%;
+    height: 100%;
+  }
+}
