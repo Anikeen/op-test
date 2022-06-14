@@ -10,7 +10,7 @@ const CarouselScene = ({ width, children }) => {
       className="slider__scene"
       ref={ctx.sceneRef}
       style={{
-        width: `${width}px`,
+        // width: `${width}px`,
       }}
 
     >
