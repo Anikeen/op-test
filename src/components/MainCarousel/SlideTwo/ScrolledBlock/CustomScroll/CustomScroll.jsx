@@ -2,26 +2,28 @@ import { useContext, useEffect, useRef, useState } from 'react';
 import { CarouselContext } from '../../../../../context';
 import './styles.scss';
 
-export const CustomScroll = ({ handleTextScroll }) => {
-  const [scrollHeight, setScrollHeight] = useState(0);
+export const CustomScroll = ({ handleTextScrolling }) => {
+  const [scrollAreaHeight, setScrollAreaHeight] = useState(0);
+  const [scrollSliderHeight, setScrollSliderHeight] = useState(0);
 
   const [isPressed, setIsPressed] = useState(false);
   const [sliderOffset, setSliderOffset] = useState(0);
   const [mouseStartPoint, setMouseStartPoint] = useState(0);
 
-  const scrollRef = useRef();
+  const scrollSliderRef = useRef();
 
   const ctx = useContext(CarouselContext);
 
   useEffect(() => {
+    const scrollAreaH = ctx.scrollAreaRef.current.clientHeight;
+    setScrollAreaHeight(scrollAreaH);
 
-    const scrollH = ctx.scrollAreaRef.current.clientHeight;
-    setScrollHeight(scrollH);
+    const scrollSliderH = scrollSliderRef.current.clientHeight;
+    setScrollSliderHeight(scrollSliderH);
 
     const eventCallback = () => {
       setIsPressed(false);
     }
-
     window.addEventListener('mouseup', eventCallback);
 
     return () => {
@@ -30,23 +32,23 @@ export const CustomScroll = ({ handleTextScroll }) => {
   }, []);
 
   useEffect(() => {
-    const scrollPercent = Math.round((sliderOffset) / (scrollHeight / 100));
+    scrollSliderRef.current.style.transform = `translateY(${sliderOffset}px)`;
 
-    handleTextScroll(scrollPercent);
-
-    scrollRef.current.style.transform = `translateY(${sliderOffset}px)`;
+    const scrollPercent = Math.round((sliderOffset) / ((scrollAreaHeight - scrollSliderHeight) / 100));
+    handleTextScrolling(scrollPercent);
   }, [sliderOffset]);
 
   const handleClick = (e) => {
     const y = getEventY(e);
+    setMouseStartPoint(y - sliderOffset);
 
     setIsPressed(true);
     ctx.setIsScrollTarget(true);
-    setMouseStartPoint(y - sliderOffset);
   }
 
   const handleMove = (e) => {
     if (!isPressed) return;
+
     const y = getEventY(e);
     const offset = y - mouseStartPoint;
 
@@ -90,7 +92,7 @@ export const CustomScroll = ({ handleTextScroll }) => {
 
       <div
         className="custom-scroll__slider"
-        ref={scrollRef}
+        ref={scrollSliderRef}
       // onMouseDown={handlePress}
       >
       </div>

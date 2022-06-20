@@ -4,23 +4,27 @@ import './styles.scss';
 
 export const ScrolledBlock = () => {
   const [textHeight, setTextHeight] = useState(0);
-  const [textScroll, setTextScroll] = useState(0);
+  const [textParentHeight, setTextParentHeight] = useState(0);
+  const [textScrolling, setTextScrolling] = useState(0);
 
   const textRef = useRef();
 
   useEffect(() => {
     const textH = textRef.current.clientHeight;
     setTextHeight(textH);
+
+    const textParentH = textRef.current.parentElement.clientHeight;
+    setTextParentHeight(textParentH);
   }, []);
 
   useEffect(() => {
-    const offset = -(textHeight / 100 * textScroll);
+    const offset = -((textHeight - textParentHeight) / 100 * textScrolling);
     textRef.current.style.transform = `translateY(${offset}px)`;
-  }, [textScroll]);
+  }, [textScrolling]);
 
   return (
     <div className="scrolled-block">
-      <CustomScroll handleTextScroll={setTextScroll} />
+      <CustomScroll handleTextScrolling={setTextScrolling} />
       <div className="block">
         <div className="scrolled-block__container">
           <p className="scrolled-block__text" ref={textRef} >
