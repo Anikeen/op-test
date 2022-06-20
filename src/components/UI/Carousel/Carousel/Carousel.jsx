@@ -11,6 +11,7 @@ export const Carousel = ({ children }) => {
   const [mouseClickPoint, setMouseClickPoint] = useState(0);
 
   const [isPressed, setIsPressed] = useState(false);
+  const [isScrollTarget, setIsScrollTarget] = useState(false);
   const [currentSlide, setCurrentSlide] = useState(1);
 
   const sliderRef = useRef();
@@ -21,6 +22,7 @@ export const Carousel = ({ children }) => {
   const ctx = useContext(GlobalContext);
 
   useEffect(() => {
+
     const frameW = sliderRef.current.parentElement.offsetWidth;
     setFrameWidth(frameW);
     setSceneWidth(frameW * children.length);
@@ -58,8 +60,12 @@ export const Carousel = ({ children }) => {
   }
 
   const handleUp = (e) => {
-    if (e.target === scrollAreaRef.current) return;
     if (e.target === modalRef.current) return;
+
+    if (isScrollTarget) {
+      setIsScrollTarget(false);
+      return;
+    }
 
     const mouseEndPoint = getEventX(e);
 
@@ -135,7 +141,8 @@ export const Carousel = ({ children }) => {
         currentSlide,
         sceneRef,
         scrollAreaRef,
-        modalRef
+        modalRef,
+        setIsScrollTarget
       }}>
         <MemoizedCarouselScene
           width={sceneWidth}

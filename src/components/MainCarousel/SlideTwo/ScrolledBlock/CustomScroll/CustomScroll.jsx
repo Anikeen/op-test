@@ -14,6 +14,7 @@ export const CustomScroll = ({ handleTextScroll }) => {
   const ctx = useContext(CarouselContext);
 
   useEffect(() => {
+
     const scrollH = ctx.scrollAreaRef.current.clientHeight;
     setScrollHeight(scrollH);
 
@@ -40,6 +41,7 @@ export const CustomScroll = ({ handleTextScroll }) => {
     const y = getEventY(e);
 
     setIsPressed(true);
+    ctx.setIsScrollTarget(true);
     setMouseStartPoint(y - sliderOffset);
   }
 
